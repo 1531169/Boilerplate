@@ -5,25 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
   <link href="http://fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="design/index.css">
+	<style type="text/css">
+		form div {
+			padding-bottom: 10px;
+			align-content: flex-start;
+		}
+		form span {
+			display: inline-block;
+			text-align: left;
+			width: 45%;
+		}
+		form input, form select {
+			width: 50%;
+		}
+	</style>
 </head>
-
 <body>
 	<header role="banner">
 		<div>
 			<h1><span>Awesome</span> Boilerplate</h1>
 			<p>
-				<label>Jump To Content</label><br>
-				<label>Jump To Footer</label><br>
-				<label>Jump To Kitties</label>
+				<label><a href="#content">Jump To Content</a></label><br>
+				<label><a href="#footer">Jump To Footer</a></label><br>
+				<label><a href="https://en.wikipedia.org/wiki/Katzen">Jump To Kitties</a></label>
 			</p>
 		</div>
 	</header>
-	<main>
+	<main id="content">
 		<section>
 			<article>
-			<!--ToDo Input Fields-->	
-			Input fields belongs here :)
-
+				<form action="#" method="get">
+					<div>
+						<span>Name:</span>
+						<input type="text" name="name" />
+					</div>
+					<div>
+						<span>Vorname:</span>
+						<input type="text" name="vorname" />
+					</div>
+					<div>
+						<span>E-Mail:</span>
+						<input type="email" name="email" />
+					</div>
+					<div>
+						<span>Telefonnummer:</span>
+						<input type="tel" name="tel" />
+					</div>
+					<div>
+						<span>Geburtsdatum:</span>
+						<input type="date" name="birthdate" />
+					</div>
+					<div>
+						<span>Fakult&auml;t:</span>
+						<select name="fak">
+							<option value="UIB">UIB</option>
+							<option value="IB">IB</option>
+							<option value="IMB">IMB</option>
+						</select>
+					</div>
+					<div>
+						<button type="submit" value="send">Abschicken</button>
+					</div>
+					</form>
 			</article>
 
 		</section>
@@ -69,8 +112,8 @@
 			</article>
 		</section>
 	</main>
-	<footer>
-		<img src="img/nodschool.svg"></a>
+	<footer id="footer">
+		<img src="img/nodeschool.svg"/>
 	</footer>
 	<script src="design/index.js"></script>
 </body>
